@@ -7,18 +7,18 @@ import {
   UseInterceptors,
   Param,
 } from "@nestjs/common";
-import { UserDto } from "./dto/user.dto";
-import { UsersService } from "./users.service";
-import { IResponse } from "../common/interfaces/response.interface";
-import { ResponseSuccess, ResponseError } from "../common/dto/response.dto";
-import { RolesGuard } from "../common/guards/roles.guard";
-import { Roles } from "../common/decorators/roles.decorator";
-import { LoggingInterceptor } from "../common/interceptors/logging.interceptor";
-import { TransformInterceptor } from "../common/interceptors/transform.interceptor";
+import { UserDto } from "../dto/user.dto";
+import { UsersService } from "../services/users.service";
+import { IResponse } from "../../common/interfaces/response.interface";
+import { ResponseSuccess, ResponseError } from "../../common/dto/response.dto";
+import { RolesGuard } from "../../common/guards/roles.guard";
+import { Roles } from "../../common/decorators/roles.decorator";
+import { LoggingInterceptor } from "../../common/interceptors/logging.interceptor";
+import { TransformInterceptor } from "../../common/interceptors/transform.interceptor";
 import { AuthGuard } from "@nestjs/passport";
-import { ProfileDto } from "./dto/profile.dto";
-import { SettingsDto } from "./dto/settings.dto";
-import { UpdateGalleryDto } from "./dto/update-gallery.dto";
+import { ProfileDto } from "../dto/profile.dto";
+import { SettingsDto } from "../dto/settings.dto";
+import { UpdateGalleryDto } from "../dto/update-gallery.dto";
 
 @Controller("users")
 @UseGuards(AuthGuard("jwt"))

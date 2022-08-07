@@ -7,14 +7,14 @@ import {
   Body,
   Param,
 } from "@nestjs/common";
-import { AuthService } from "./auth.service";
-import { Login } from "./interfaces/login.interface";
-import { ResponseSuccess, ResponseError } from "../common/dto/response.dto";
-import { IResponse } from "../common/interfaces/response.interface";
-import { CreateUserDto } from "../users/dto/create-user.dto";
-import { UserDto } from "../users/dto/user.dto";
-import { UsersService } from "../users/users.service";
-import { ResetPasswordDto } from "./dto/reset-password.dto";
+import { AuthService } from "../services/auth.service";
+import { Login } from "../interfaces/login.interface";
+import { ResponseSuccess, ResponseError } from "../../common/dto/response.dto";
+import { IResponse } from "../../common/interfaces/response.interface";
+import { CreateUserDto } from "../../users/dto/create-user.dto";
+import { UserDto } from "../../users/dto/user.dto";
+import { UsersService } from "../../users/services/users.service";
+import { ResetPasswordDto } from "../dto/reset-password.dto";
 
 @Controller("auth")
 export class AuthController {
